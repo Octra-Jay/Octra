@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>OCTRA Dashboard</title>
-                <script src="https://cdn.tailwindcss.com"></script>
-                    <style>
-                            @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-                                    @keyframes slideDown { from { transform: translateY(-100%); } to { transform: translateY(0); } }
-                                            .bg-dark { background-color: #1e1e2f; }
-                                                    .bg-card { background-color: #2a2a44; }
-                                                            .text-purple { color: #8e44ad; }
-                                                                    .hover-purple:hover { color: #7d3c98; transition: color 0.3s; }
-                                                                            .hover-bg-purple:hover { background-color: #7d3c98; transition: background-color 0.3s; }
-                                                                                </style>
-                                                                                </head>
-                                                                                <body class="bg-dark text-white font-sans text-center pt-16 opacity-0 animate-fadeInUp">
-                                                                                    <header class="fixed top-0 w-full bg-card p-2.5 z-10 animate-slideDown">
-                                                                                            <h1 class="text-xl text-purple">OCTRA Dashboard</h1>
-                                                                                                </header>
-                                                                                                    <div class="mx-auto w-11/12 bg-card rounded-lg shadow-lg p-4 mt-4">
-                                                                                                            <h3 class="text-lg text-purple">Dashboard</h3>
-                                                                                                                    <p class="text-gray-400 text-base">Dies ist ein Platzhalter für das Dashboard. Füge hier deine Inhalte hinzu!</p>
-                                                                                                                            <a href="index.html" class="inline-block bg-purple text-white p-2 rounded-lg hover-bg-purple hover-scale">Zurück zur Startseite</a>
-                                                                                                                                </div>
-                                                                                                                                </body>
-                                                                                                                                </html>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>[Seitenname] - OCTRA</title>
+        <link href="css/output.css" rel="stylesheet">
+          <style>
+              .fade-in { animation: fadeIn 1s ease-in forwards; }
+                  @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+                    </style>
+                    </head>
+                    <body class="bg-background text-text font-sans min-h-screen flex flex-col">
+                      <!-- Header -->
+                        <header class="fixed top-0 w-full bg-card p-4 shadow">
+                            <div class="container mx-auto flex justify-between items-center">
+                                  <h1 class="text-3xl font-bold text-primary">OCTRA</h1>
+                                        <nav class="hidden md:flex gap-4">
+                                                <a href="dashboard.html" class="text-primary hover:text-primaryHover">Dashboard</a>
+                                                        <a href="modules.html" class="text-primary hover:text-primaryHover">Module</a>
+                                                                <a href="wiki.html" class="text-primary hover:text-primaryHover">Wiki</a>
+                                                                        <a href="about.html" class="text-primary hover:text-primaryHover">Über</a>
+                                                                              </nav>
+                                                                                    <button class="md:hidden text-primary" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                                                                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                                                                                                  </button>
+                                                                                                      </div>
+                                                                                                          <div id="mobile-menu" class="hidden md:hidden bg-card p-4">
+                                                                                                                <a href="dashboard.html" class="block text-primary hover:text-primaryHover py-2">Dashboard</a>
+                                                                                                                      <a href="modules.html" class="block text-primary hover:text-primaryHover py-2">Module</a>
+                                                                                                                            <a href="wiki.html" class="block text-primary hover:text-primaryHover py-2">Wiki</a>
+                                                                                                                                  <a href="about.html" class="block text-primary hover:text-primaryHover py-2">Über</a>
+                                                                                                                                      </div>
+                                                                                                                                        </header>
+
+                                                                                                                                          <!-- Main -->
+                                                                                                                                            <main class="p-4 pt-20 pb-16 flex-grow flex items-center justify-center container mx-auto">
+                                                                                                                                                <section class="text-center fade-in">
+                                                                                                                                                      <h2 class="text-4xl font-bold text-primary mb-4">[Seitenname]</h2>
+                                                                                                                                                            <p class="text-lg mb-6">Diese Seite ist in Arbeit. Bleib dran für Updates!</p>
+                                                                                                                                                                  <a href="index.html" class="bg-primary hover:bg-primaryHover text-white px-6 py-3 rounded-lg transition">Zurück zur Startseite</a>
+                                                                                                                                                                      </section>
+                                                                                                                                                                        </main>
+
+                                                                                                                                                                          <!-- Footer -->
+                                                                                                                                                                            <footer class="bg-card p-4 text-center shadow-inner">
+                                                                                                                                                                                <p>© 2025 OCTRA | 
+                                                                                                                                                                                      <a href="https://github.com" class="text-primary hover:text-primaryHover">GitHub</a> | 
+                                                                                                                                                                                            <a href="https://discord.com" class="text-primary hover:text-primaryHover">Discord</a>
+                                                                                                                                                                                                </p>
+                                                                                                                                                                                                  </footer>
+                                                                                                                                                                                                    <script src="js/scripts.js"></script>
+                                                                                                                                                                                                    </body>
+                                                                                                                                                                                                    </html>
